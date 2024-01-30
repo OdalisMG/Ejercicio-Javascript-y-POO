@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=s, initial-scale=1.0">
+    <title>Ejercicio 2 </title>
+</head>
+<body>
+    <script>
+    
+    var inicio = ["unacadena", 3,9,1,10,500,1,10, true];
+    function ordenarNumeros(arr) {
+        var numeros = arr.filter(function (element){
+            return typeof element === 'number';
+        });
+        for ( var i= 0; i< numeros.length - 1; i++){
+            for (var j = 0; j < numeros.length - 1 - i; j++){
+                if (numeros [j] < numeros[j + 1]){
+                    var tmp = numeros[j];
+                    numeros[j + 1]= tmp;
+                }
+            }
+        }
+        return numeros;
+    }
+
+    var resultado = ordenarNumeros(inicio);
+    console.log(resultado);
+    </script>
+</body>
+</html>
